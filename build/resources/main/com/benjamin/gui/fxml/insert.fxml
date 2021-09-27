@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.benjamin.gui.controllers.InsertController">
+   <children>
+      <VBox spacing="20.0">
+         <children>
+            <Label text="Ajout d'un fournisseur">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <VBox spacing="15.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="110.0" text="Nom">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtCompanyName" prefHeight="24.0" prefWidth="215.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="110.0" text="Rue">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtAddress" prefHeight="24.0" prefWidth="215.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="34.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="16.0" prefWidth="110.0" text="CP /  Ville">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="txtPostalCode" prefHeight="24.0" prefWidth="85.0" />
+                              <TextField fx:id="textCity" layoutX="27.0" layoutY="10.0" prefHeight="24.0" prefWidth="119.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="58.0">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="110.0" text="Contact">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtContactName" prefHeight="24.0" prefWidth="215.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addSupplier" text="Ajouter">
+                           <HBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#clearForm" text="Annuler">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,5 +1,6 @@
 package com.benjamin.gui.controllers;
 
+import com.benjamin.App;
 import com.benjamin.gui.model.CustomersManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -36,5 +38,9 @@ public class OrdersController implements Initializable {
         for (String order : orders) {
             result.appendText(order + "\n");
         }
+    }
+
+    public void returnToMenu(ActionEvent actionEvent) throws IOException {
+        App.changeFxml("menu.fxml");
     }
 }

@@ -1,11 +1,13 @@
 package com.benjamin.gui.controllers;
 
+import com.benjamin.App;
 import com.benjamin.gui.model.DataBase;
 import com.benjamin.gui.model.SuppliersManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public class TraitementController {
@@ -26,5 +28,9 @@ public class TraitementController {
         supCity.setText(infos.get("City"));
         supPostal.setText(infos.get("PostalCode"));
         supContact.setText(infos.get("ContactName"));
+    }
+
+    public void returnToMenu(ActionEvent actionEvent) throws IOException {
+        App.changeFxml("menu.fxml");
     }
 }

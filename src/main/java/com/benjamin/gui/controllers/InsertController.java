@@ -1,10 +1,13 @@
 package com.benjamin.gui.controllers;
 
+import com.benjamin.App;
 import com.benjamin.gui.model.SuppliersManager;
 import com.benjamin.gui.services.RegexMatches;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class InsertController {
     @FXML
@@ -80,5 +83,9 @@ public class InsertController {
             txtPostalCode.setStyle("-fx-border-color: red;");
             return false;
         }
+    }
+
+    public void returnToMenu(ActionEvent actionEvent) throws IOException {
+        App.changeFxml("menu.fxml");
     }
 }
